@@ -34,7 +34,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>Carrinho Compras</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" />
 
 </head>
@@ -64,7 +64,7 @@
 				  <?php foreach($resultsCarts as $result) : ?>
 					<tr>
 						
-						<td><?php echo $result['name']?></td>
+						<td><?php echo utf8_encode($result['name']) ?></td>
 						<td>
 							<input type="text" name="prod[<?php echo $result['id']?>]" value="<?php echo $result['quantity']?>" size="1" />
 														
