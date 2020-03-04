@@ -28,24 +28,11 @@
 	$resultsCarts = getContentCart($pdoConnection);
 	$totalCarts  = getTotalCart($pdoConnection);
 
+	include('header.php'); ?>
 
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Carrinho Compras</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" />
-
-</head>
-<body>
 	<div class="container">
-		<div class="card mt-5">
-			 <div class="card-body">
-	    		<h4 class="card-title">Carrinho</h4>
-	    		<a href="index.php">Lista de Produtos</a>
-	    	</div>
-		</div>
+        <h4 class="card-title">Carrinho</h4>
+        <a href="./index.php">Lista de Produtos</a>
 
 		<?php if($resultsCarts) : ?>
 			<form action="carrinho.php?acao=up" method="post">

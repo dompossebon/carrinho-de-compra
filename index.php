@@ -2,32 +2,16 @@
 require_once "functions/product.php";
 $pdoConnection = require_once "connection.php";
 $products = getProducts($pdoConnection);
-?>
-<!DOCTYPE HTML>
-<html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="description"
-          content="Um carrinho para usar como teste. Enjoy :)"/>
-    <meta name="keywords" content="html5, css3, responsive, Cart Buy"/>
-    <meta name="apple-mobile-web-app-title" content="carrinho"/>
-    <meta property="og:site_name" content="carrinho"/>
-    <meta property="og:type" content="article by Buy"/>
-    <meta property="og:locale" content="pt_BR"/>
-    <meta property="og:title" content="brincando com código Procedural"/>
-    <title>Carrinho de Compras</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"/>
 
-</head>
-<body>
+include('header.php'); ?>
 <div class="container">
     <p>
         Meus Produtos Armazenados em Banco de Dados
-        <br />Add produtos diretamente no Banco
+        <br/>Add produtos diretamente no Banco
+        <br/>Este exemplo trata-se apenas de armazenar em $_SESSION
     </p>
     <p>
-        este exemplo trata-se apenas de armazenar em $_SESSION
+       <a href="carrinho.php"> Vizualizar Meu Carrinho </a>
     </p>
     <div class="row">
         <?php foreach ($products as $product) : ?>
